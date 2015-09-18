@@ -1,0 +1,27 @@
+{
+  "name": "cl-thumbnail",
+  "version": "0.0.0",
+  "authors": [
+    "Raphael 'Youchra' Hippe <youchra@competeleague.com>"
+  ],
+  "description": "CompeteLeagues Version of Bootstrap Thumbnail",
+  "main": "src/clThumbnail.css, src/clThumbnail.html, src/clThumbnail.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "CompeteLeague",
+    "Thumbnail",
+    "AngularJS",
+    "clThumbnail"
+  ],
+  "license": "MIT",
+  "homepage": "http://competeleague.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
