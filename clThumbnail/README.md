@@ -2,7 +2,7 @@
 
 ### Description
 
-This directive was writte for the CompeteLeague website. It provides a CompeteLeaug
+This directive was written for the CompeteLeague website. It provides a CompeteLeague
 customized Bootstrap Thumbnail Layout.
 
 ### Install
@@ -17,7 +17,7 @@ The HTML Tag:
 
 And in your Controller define the options object as this:
 
-    $scope.youchraThumbnail = {
+    $scope.optionsObject = {
       firstName: 'firstName',
       lastName: 'lastName',
       nickName: 'nickName',
