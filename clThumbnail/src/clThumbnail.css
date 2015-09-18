@@ -1,0 +1,24 @@
+.label-cl {
+  color: snow;
+  background-color: #3e3e3e;
+  background: #515151;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #515151), color-stop(50%, #191919), color-stop(100%, #515151));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #515151 0%, #191919 50%, #515151 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#515151', GradientType=1);
+  /* IE6-9 */
+}
+
+.thumbnail {
+  height: 550px;
+}
