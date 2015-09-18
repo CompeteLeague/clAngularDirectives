@@ -21,7 +21,7 @@ And in your Controller define the options object as this:
       firstName: 'firstName',
       lastName: 'lastName',
       nickName: 'nickName',
-      infoText: '
+      infoText: 'infoText'
       imageUrl: 'imageUrl.jpg',
       email: 'email@email.com'
     };
