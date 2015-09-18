@@ -17,6 +17,10 @@
   ],
   "license": "MIT",
   "homepage": "http://competeleague.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CompeteLeague/clAngularDirectives.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
