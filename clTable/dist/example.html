@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>AngularJS cl-thumbnail</title>
+  <title>AngularJS cl-table</title>
 
   <!--
     IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
@@ -23,9 +23,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  <!-- cl-thumbnail files -->
-  <script src="../dist/clThumbnail.js"></script>
-  <link rel="stylesheet" href="../dist/clThumbnail.css">
+  <!-- cl-table files -->
+  <script src="../dist/clTable.js"></script>
+  <link rel="stylesheet" href="../dist/clTable.css">
 
   <style>
     body {
@@ -36,29 +36,8 @@
 
 <body ng-controller="ExampleCtrl">
   <script src="example.js"></script>
-  <h2>AngularJS cl-thumbnail</h2>
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <cl-thumbnail options="youchraThumbnail"></cl-thumbnail>
-    </div>
-  </div>
+  <h2>AngularJS cl-table</h2>
+  <cl-table options="tableOptions"></cl-table>
 
 </body>
 

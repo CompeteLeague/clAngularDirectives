@@ -1,7 +1,7 @@
 {
-  "name": "CLAngularJSDirectives",
+  "name": "CLAngularJSclThumbnail",
   "version": "1.0.0",
-  "description": "A collection of AngularJS Directives written for the CompeteLeague Website",
+  "description": "CompeteLeagues Version of Bootstrap Thumbnail",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

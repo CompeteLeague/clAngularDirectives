@@ -1,0 +1,10 @@
+<table class="table">
+  <th>
+    <td ng-repeat="headline in options.heading">{{headline}}</td>
+  </th>
+  <tr ng-repeat="item in options.content">
+    <td ng-repeat="attribute in options.contentAttributes">
+      {{item[attribute]}}
+    </td>
+  </tr>
+</table>
