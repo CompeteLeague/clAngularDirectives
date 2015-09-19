@@ -2,7 +2,7 @@ var clTable = angular.module('cl.table', []);
 
 clTable.directive('clTable', function() {
   return {
-    templateUrl: 'bower_components/clAngularDirectives/clTable/dist/clTable.html',
+    templateUrl: 'bower_components/cl-angular-directives/clTable/dist/clTable.html',
     // templateUrl: 'clTable.html',
     restrict: 'E',
     scope: {
