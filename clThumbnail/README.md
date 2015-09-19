@@ -7,7 +7,7 @@ customized Bootstrap Thumbnail Layout.
 
 ### Install
 
-Use `bower install cl-thumbnail` to install the package.
+Use `bower install cl-angular-directives` to install the package.
 
 ### Usage
 

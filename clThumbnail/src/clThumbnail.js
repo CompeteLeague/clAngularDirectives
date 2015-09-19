@@ -6,7 +6,8 @@ clThumbnail.directive('clThumbnail', function () {
     scope: {
       options: '=options'
     },
-    templateUrl: 'clThumbnail.html',
+    // templateUrl: 'clThumbnail.html',
+    templateUrl: 'bower_components/clAngularDirectives/clThumbnail/dist/clThumbnail.html',
     link: function (scope, element, attrs) {
       console.log('options', scope.options);
     }

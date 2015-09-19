@@ -1,0 +1,33 @@
+{
+  "name": "cl-angular-directives",
+  "version": "0.0.1",
+  "authors": [
+    "Raphael Hippe <youchra@competeleague.com>",
+    "Clemens Basler <clemens@competeleague.com>",
+    "Benni Kurczyk <oberstk@competeleague.com>"
+  ],
+  "description": "CompeteLeagues AngularJS Directives Collection. The Directives are all written for the CL Website but should be generic enough for everyone to use.",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "CompeteLeague",
+    "cl",
+    "AngularJS",
+    "Directives",
+    "Collection"
+  ],
+  "license": "MIT",
+  "homepage": "http://competeleague.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/CompeteLeague/clAngularDirectives.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
