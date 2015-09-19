@@ -11,6 +11,16 @@ Use `bower install cl-angular-directives` to install the package.
 
 ### Usage
 
+Make sure you have all the files and modules imported correctly:
+
+Index.html:
+
+    <script src="bower_components/cl-angular-directives/clThumbnail/dist/clThumbnail.js"></script>
+
+And the Module:
+
+    angular.module('YourModule', ['cl.thumbnail'])
+
 The HTML Tag:
 
     <cl-thumbnail options="optionsObject"></cl-thumbnail>

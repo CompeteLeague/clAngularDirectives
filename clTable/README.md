@@ -11,6 +11,16 @@ Use `bower install cl-angular-directives` to install the package.
 
 ### Usage
 
+Make sure you have all the files and modules imported correctly:
+
+Index.html:
+
+    <script src="bower_components/cl-angular-directives/clTable/dist/clTable.js"></script>
+
+And the Module:
+
+    angular.module('YourModule', ['cl.table'])
+
 The HTML Tag:
 
     <cl-table options="tableOptions"></cl-table>
