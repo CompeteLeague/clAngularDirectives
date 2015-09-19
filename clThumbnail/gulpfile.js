@@ -77,8 +77,8 @@ gulp.task('serveDist', function() {
 gulp.task('default', ['lint', 'connect']);
 
 // build task
-gulp.task('build',  ['clean'], function(){
-	gulp.start('lint', 'minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-image-files');
+gulp.task('build',  ['lint'], function(){
+	gulp.start('minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-image-files');
 });
 
 function errorHandler(error) {

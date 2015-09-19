@@ -1,4 +1,4 @@
-## CL Thumbnail
+## CL Table
 
 ### Description
 

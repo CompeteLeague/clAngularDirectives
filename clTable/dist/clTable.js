@@ -1,1 +1,1 @@
-var clTable=angular.module("cl.table",[]);clTable.directive("clTable",function(){return{templateUrl:"clTable.html",restrict:"E",scope:{options:"=options"},link:function(l,e,t){l.isObject=function(l){return angular.isObject(l)}}}});
+var clTable=angular.module("cl.table",[]);clTable.directive("clTable",function(){return{templateUrl:"bower_components/clAngularDirectives/clTable/dist/clTable.html",restrict:"E",scope:{options:"=options"},link:function(e,l,t){e.isObject=function(e){return angular.isObject(e)}}}});
