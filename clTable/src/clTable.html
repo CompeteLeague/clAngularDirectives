@@ -1,10 +1,11 @@
 <table class="table">
-  <th>
-    <td ng-repeat="headline in options.heading">{{headline}}</td>
-  </th>
+  <tr>
+    <th ng-repeat="headline in options.heading">{{headline}}</th>
+  </tr>
   <tr ng-repeat="item in options.content">
     <td ng-repeat="attribute in options.contentAttributes">
-      {{item[attribute]}}
+      <span ng-if="!isObject(item[attribute])">{{item[attribute]}}</span>
+      <button ng-if="isObject(item[attribute])" ng-click="item[attribute].fn()" class="btn btn-sm btn-primary">{{item[attribute].display}}</button>
     </td>
   </tr>
 </table>

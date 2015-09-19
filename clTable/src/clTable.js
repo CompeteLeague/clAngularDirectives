@@ -8,7 +8,9 @@ clTable.directive('clTable', function() {
       options: '=options'
     },
     link: function(scope, element, attrs) {
-
+      scope.isObject = function (input) {
+        return angular.isObject(input);
+      };
     }
   };
 });
