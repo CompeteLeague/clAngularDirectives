@@ -3,9 +3,6 @@ var module = angular.module('example', ['cl.creation']);
 module.controller('ExampleCtrl', ['$scope', function($scope) {
   $scope.creationOptions = {
     title: 'Tournament Creation',
-    /*here you can put in your input Fields:
-    inputTypes: radio, text, number, textarea, select, checkbox
-    */
     inputs: [{
       inputType: 'text',
       inputLabel: 'Name',
