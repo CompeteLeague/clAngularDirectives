@@ -4,7 +4,7 @@
 <b>provided templates:</b>
 <div class="form-group">
   <select class="form-control" ng-model="selectedDataTemplate">
-    <option ng-repeat="(key, value) in options.dataTemplates" > {{key}} </option>
+    <option ng-repeat="(key, value) in options.dataTemplates"> {{key}} </option>
   </select>
   <button class="btn btn-sm btn-primary" ng-click="applyDataTemplate(selectedDataTemplate)">Apply Data Template</button>
 </div>
@@ -14,7 +14,9 @@
     <div ng-repeat="clInput in options.inputs">
       <!--Label of the whole input-->
       <div class="form-group">
-        <label>{{clInput.inputLabel}}</label>
+        <label>{{clInput.inputLabel}}
+          <span ng-if="clInput.inputIsRequired"> *</span>
+        </label>
         <!--if the inputType is TEXT-->
         <div ng-if="clInput.inputType==='text'">
           <input class="form-control" type="text" placeholder="{{clInput.inputPlaceholder}}" ng-model="clInput.inputModel" ng-disabled="!clInput.inputIsActive" ng-required="clInput.inputIsRequired" />
@@ -52,5 +54,6 @@
   </div>
 
   <!--action button-->
-  <button ng-click="options.create('Hallo')" class="btn btn-primary" ng-disabled="clCreationForm.$invalid">{{options.buttonLabel}}</button>
+  <i>Fields marked with an asterisk (*) are required</i><br>
+  <button ng-click="options.create(generateCreationObject())" class="btn btn-primary" ng-disabled="clCreationForm.$invalid">{{options.buttonLabel}}</button>
 </form>

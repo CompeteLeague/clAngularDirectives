@@ -7,109 +7,75 @@ module.controller('ExampleCtrl', ['$scope', function($scope) {
     inputTypes: radio, text, number, textarea, select, checkbox
     */
     inputs: [{
-      /*needed*/
-      inputType: 'radio',
-      inputLabel: 'Name',
-      /*default = true */
-      inputIsActive: true,
-      /* optional*/
-      inputClass: 'inputClass',
-      /*options*/
-      inputOptions: ['option1', 'option2', 'option3'],
-      inputModel: 'option3'
-    }, {
-      /*needed*/
       inputType: 'text',
-      inputLabel: 'Name1',
-      /*default = true */
+      inputLabel: 'Name',
+      inputKey: 'name',
+      inputIsActive: true,
+      inputIsRequired: true,
+      inputPlaceholder: 'Tournament Name',
+      inputClass: 'inputClass',
+      inputModel: ''
+    }, {
+      inputType: 'radio',
+      inputLabel: 'Tournament Type',
+      inputKey: 'type',
       inputIsRequired: true,
       inputIsActive: true,
-      /* optional*/
-      inputPlaceholder: 'placeholder',
       inputClass: 'inputClass',
-      inputModel: 'Hello World'
+      inputOptions: ['Season', 'Qualifier', 'Promotion', 'Playoffs'],
+      inputModel: ''
     }, {
-      /*needed*/
-      inputType: 'textarea',
-      inputLabel: 'Name2',
-      /*default = true */
-      inputIsRequired: false,
-      inputIsActive: true,
-      /* optional*/
-      inputPlaceholder: 'placeholder',
-      inputClass: 'inputClass',
-      inputModel: 'aweioawjoe'
-    }, {
-      /*needed*/
-      inputType: 'number',
-      inputLabel: 'Name3',
-      /*default = true */
+      inputType: 'radio',
+      inputLabel: 'Region',
+      inputKey: 'region',
       inputIsRequired: true,
       inputIsActive: true,
-      /* optional*/
-      inputPlaceholder: 'placeholder',
       inputClass: 'inputClass',
-      inputModel: 5
+      inputOptions: ['EU', 'NA'],
+      inputModel: ''
     }, {
-      /*needed sisisi*/
-      inputType: 'select',
-      inputLabel: 'Name4',
-      /*default = true */
+      inputType: 'radio',
+      inputLabel: 'Open',
+      inputKey: 'open',
       inputIsRequired: true,
       inputIsActive: true,
-      /* optional*/
-      inputPlaceholder: 'placeholder',
       inputClass: 'inputClass',
-      inputOptions: ['option1', 'option2', 'option3'],
-      inputModel: 'option1'
-    }, {
-      /*needed*/
-      inputType: 'checkbox',
-      inputLabel: 'Name5',
-      /*default = true */
-      inputIsRequired: false,
-      inputIsActive: true,
-      /* optional*/
-      inputPlaceholder: 'placeholder',
-      inputClass: 'inputClass',
-      inputOptions: [{
-        inputOption: 'option1',
-        inputModel: true
-      }, {
-        inputOption: 'option2',
-        inputModel: ''
-      }, {
-        inputOption: 'option3',
-        inputModel: true
-      }]
+      inputOptions: ['True', 'False'],
+      inputModel: ''
     }],
-    buttonLabel: 'create Tournament',
-    create: function(options) {
-      console.log(options);
+    buttonLabel: 'Create Tournament',
+    create: function(creationObject) {
+      console.log(creationObject);
     },
     dataTemplates: {
-      a: {
-        Name5: {
-          value: {
-            option2: true,
-            option1: true
-          },
+      naGoldPlatPlayoffs: {
+        type: {
+          value: 'Playoffs'
         },
-        Name1: {
-          value: 'Hello Liam'
+        region: {
+          value: 'NA'
+        },
+        open: {
+          value: 'False'
+        },
+        name: {
+          value: 'NA Gold and Platinum Playoffs'
         }
       },
-      b: {
-        Name5: {
-          value: {
-            option2: true,
-            option1: true
-          },
+      euBronzeSilverSeasonOpen: {
+        type: {
+          value: 'Season'
         },
-        Name1: {
-          value: 'Hello CompeteLeague'
+        region: {
+          value: 'EU',
+        },
+        open: {
+          value: 'True',
+        },
+        name: {
+          value: 'EU Bronze and Silver Open Season'
         }
-      }
+      },
     }
   };
 }]);
