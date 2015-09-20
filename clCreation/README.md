@@ -3,7 +3,8 @@
 ### Description
 
 This directive was written for the CompeteLeague website. It provides a CompeteLeague
-customized Bootstrap Table Layout with some extra features.
+customized Creation Template. You can put in any kinds of inputs set them to be required
+or disabled. Define your `create()` function which will get the creation object.
 
 ### Install
 
