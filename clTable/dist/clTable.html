@@ -5,7 +5,7 @@
   <tr ng-repeat="item in options.content">
     <td ng-repeat="attribute in options.contentAttributes">
       <span ng-if="!isObject(item[attribute])">{{item[attribute]}}</span>
-      <button ng-if="isObject(item[attribute])" ng-click="item[attribute].fn()" class="btn btn-sm btn-primary">{{item[attribute].display}}</button>
+      <button ng-if="isObject(item[attribute])" ng-click="item[attribute].fn(item)" class="btn btn-sm btn-primary">{{item[attribute].display}}</button>
     </td>
   </tr>
 </table>
