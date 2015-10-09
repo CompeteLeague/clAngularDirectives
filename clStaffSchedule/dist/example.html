@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS cl-staff-schedule</title>
+
+  <!--
+    IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
+    For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+  -->
+  <!--[if lt IE 9]>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+    <script>
+      document.createElement('cl-thumbnail');
+      document.createElement('cl-thumbnail-match');
+      document.createElement('cl-thumbnail-choices');
+    </script>
+  <![endif]-->
+
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- cl-staffSchedule files -->
+  <script src="../dist/clStaffSchedule.js"></script>
+  <link rel="stylesheet" href="../dist/clStaffSchedule.css">
+
+  <style>
+    body {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body ng-controller="ExampleCtrl">
+  <script src="example.js"></script>
+  <h2>AngularJS cl-staff-schedule</h2>
+  <cl-staff-schedule options="staffScheduleOptions"></cl-staff-schedule>
+
+</body>
+
+</html>

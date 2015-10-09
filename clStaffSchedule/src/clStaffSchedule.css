@@ -1,0 +1,29 @@
+.schedule {
+  width: 700px;
+}
+
+.weekday {
+  width: 100px;
+  float: left;
+}
+.cell {
+  min-height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+  padding: 15px;
+}
+.cell-split {
+  min-height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+}
+.entry {
+  background-color: #5cb85c;
+}
+.absence {
+  background-color: #d9534f;
+}
