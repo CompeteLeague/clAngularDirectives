@@ -1,0 +1,1 @@
+var clStaffSchedule=angular.module("cl.staffSchedule",[]);clStaffSchedule.directive("clStaffSchedule",function(){return{templateUrl:"clStaffSchedule.html",restrict:"E",scope:{options:"=options"},link:function(e,t,l){e.isArray=function(e){return angular.isArray(e)}}}});
