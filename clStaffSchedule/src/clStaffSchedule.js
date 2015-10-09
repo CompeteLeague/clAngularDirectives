@@ -2,8 +2,8 @@ var clStaffSchedule = angular.module('cl.staffSchedule', []);
 
 clStaffSchedule.directive('clStaffSchedule', function() {
   return {
-    // templateUrl: 'bower_components/cl-angular-directives/clStaffSchedule/dist/clStaffSchedule.html',
-    templateUrl: 'clStaffSchedule.html',
+    templateUrl: 'bower_components/cl-angular-directives/clStaffSchedule/dist/clStaffSchedule.html',
+    // templateUrl: 'clStaffSchedule.html',
     restrict: 'E',
     scope: {
       options: '=options'
