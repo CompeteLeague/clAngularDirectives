@@ -1,6 +1,6 @@
 {
   "name": "cl-angular-directives",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "authors": [
     "Raphael Hippe <youchra@competeleague.com>",
     "Clemens Basler <clemens@competeleague.com>",
@@ -23,6 +23,12 @@
     "type": "git",
     "url": "git://github.com/CompeteLeague/clAngularDirectives.git"
   },
+  "main": [
+    "clCreation/dist/clCreation.js",
+    "clStaffSchedule/dist/clStaffSchedule.js",
+    "clTable/dist/clTable.js",
+    "clThumbnail/dist/clThumbnail.js"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
