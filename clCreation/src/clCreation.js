@@ -2,7 +2,6 @@ var clCreation = angular.module('cl.creation', []);
 
 clCreation.directive('clCreation', function() {
   return {
-    // templateUrl: 'clCreation.html',
     templateUrl: 'clCreation.html',
     restrict: 'E',
     scope: {

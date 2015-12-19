@@ -3,7 +3,6 @@ var clStaffSchedule = angular.module('cl.staffSchedule', []);
 clStaffSchedule.directive('clStaffSchedule', function() {
   return {
     templateUrl: 'clStaffSchedule.html',
-    // templateUrl: 'clStaffSchedule.html',
     restrict: 'E',
     scope: {
       options: '=options'

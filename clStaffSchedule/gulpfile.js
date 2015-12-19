@@ -102,7 +102,7 @@ gulp.task('scripts', ['clean'], function() {
         quotes: true
       }))
       .pipe(templateCache({
-        module: 'cl.staffschedule'
+        module: 'cl.staffSchedule'
       }));
   };
 
