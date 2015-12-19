@@ -8,7 +8,9 @@ clThumbnail.directive('clThumbnail', function () {
       options: '=options'
     },
     link: function (scope, element, attrs) {
-      console.log('options', scope.options);
+      scope.isObject = function (input) {
+        return angular.isObject(input);
+      };
     }
   };
 });
