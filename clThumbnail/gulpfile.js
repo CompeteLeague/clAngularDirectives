@@ -3,8 +3,27 @@ var gulp = require('gulp'),
   connect = require('gulp-connect'),
   jshint = require('gulp-jshint'),
   uglify = require('gulp-uglify'),
+  del = require('del'),
+  es = require('event-stream'),
+  fs = require('fs'),
+  minifyHtml = require('gulp-minify-html'),
   minifyCSS = require('gulp-minify-css'),
-  del = require('del');
+  plumber = require('gulp-plumber'),
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
+  header = require('gulp-header'),
+  footer = require('gulp-footer'),
+  templateCache = require('gulp-angular-templatecache');
+
+var config = {
+  pkg: JSON.parse(fs.readFileSync('./package.json')),
+  banner: '/*!\n' +
+    ' * <%= pkg.name %>\n' +
+    ' * <%= pkg.homepage %>\n' +
+    ' * Version: <%= pkg.version %> - <%= timestamp %>\n' +
+    ' * License: <%= pkg.license %>\n' +
+    ' */\n\n\n'
+};
 
 // tasks
 
@@ -73,15 +92,84 @@ gulp.task('serveDist', function() {
   });
 });
 
+gulp.task('scripts', ['clean'], function() {
+
+  var buildTemplates = function() {
+    return gulp.src('src/**/*.html')
+      .pipe(minifyHtml({
+        empty: true,
+        spare: true,
+        quotes: true
+      }))
+      .pipe(templateCache({
+        module: 'ui.select'
+      }));
+  };
+
+  var buildLib = function() {
+    return gulp.src(['src/*.js'])
+      .pipe(plumber({
+        errorHandler: handleError
+      }))
+      .pipe(concat('select_without_templates.js'))
+      .pipe(header('(function () { \n"use strict";\n'))
+      .pipe(footer('\n}());'))
+      .pipe(jshint())
+      .pipe(jshint.reporter('jshint-stylish'))
+      .pipe(jshint.reporter('fail'));
+  };
+
+  return es.merge(buildLib(), buildTemplates())
+    .pipe(plumber({
+      errorHandler: handleError
+    }))
+    .pipe(concat('clthumbnail.js'))
+    .pipe(header(config.banner, {
+      timestamp: (new Date()).toISOString(),
+      pkg: config.pkg
+    }))
+    .pipe(gulp.dest('dist'))
+    .pipe(uglify({
+      preserveComments: 'some'
+    }))
+    .pipe(rename({
+      ext: '.min.js'
+    }))
+    .pipe(gulp.dest('dist'));
+
+});
+
+gulp.task('styles', ['clean'], function() {
+
+  return gulp.src('src/clthumbnail.css')
+    .pipe(header(config.banner, {
+      timestamp: (new Date()).toISOString(),
+      pkg: config.pkg
+    }))
+    .pipe(rename('clthumbnail.css'))
+    .pipe(gulp.dest('dist'))
+    .pipe(minifyCSS())
+    .pipe(rename({
+      ext: '.min.css'
+    }))
+    .pipe(gulp.dest('dist'));
+
+});
+
+
 // default task
 gulp.task('default', ['lint', 'connect']);
 
 // build task
-gulp.task('build',  ['lint'], function(){
-	gulp.start('minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-image-files');
+gulp.task('build', ['lint'], function() {
+  gulp.start('minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'copy-image-files');
 });
 
-function errorHandler(error) {
-  console.log(error.toString());
+gulp.task('buildDist', ['lint'], function() {
+  gulp.start('minify-css', 'minify-js', 'scripts');
+});
+
+var handleError = function(err) {
+  console.log(err.toString());
   this.emit('end');
-}
+};

@@ -24,16 +24,18 @@
     "url": "git://github.com/CompeteLeague/clAngularDirectives.git"
   },
   "main": [
-    "clCreation/dist/clCreation.js",
-    "clStaffSchedule/dist/clStaffSchedule.js",
-    "clTable/dist/clTable.js",
-    "clThumbnail/dist/clThumbnail.js"
+    "clCreation/dist/clcreation.min.js",
+    "clStaffSchedule/dist/clstaffschedule.min.js",
+    "clTable/dist/cltable.min.js",
+    "clThumbnail/dist/clthumbnail.min.js"
   ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "src",
     "test",
-    "tests"
+    "gulpfile.js",
+    "examples"
   ]
 }

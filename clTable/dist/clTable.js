@@ -1,1 +1,30 @@
-var clTable=angular.module("cl.table",[]);clTable.directive("clTable",function(){return{templateUrl:"bower_components/cl-angular-directives/clTable/dist/clTable.html",restrict:"E",scope:{options:"=options"},link:function(e,l,t){e.isObject=function(e){return angular.isObject(e)}}}});
+/*!
+ * CLAngularJSclTable
+ * 
+ * Version: 1.0.0 - 2015-12-19T09:08:01.690Z
+ * License: MIT
+ */
+
+
+angular.module("ui.select").run(["$templateCache", function($templateCache) {$templateCache.put("clTable.html","<table class=\"table\"><tr><th ng-repeat=\"headline in options.heading\">{{headline}}</th></tr><tr ng-repeat=\"item in options.content\"><td ng-repeat=\"attribute in options.contentAttributes\"><span ng-if=\"!isObject(item[attribute])\">{{item[attribute]}}</span> <button ng-if=\"isObject(item[attribute])\" ng-click=\"item[attribute].fn(item)\" class=\"btn btn-sm btn-primary\">{{item[attribute].display}}</button></td></tr></table>");}]);
+(function () { 
+"use strict";
+var clTable = angular.module('cl.table', []);
+
+clTable.directive('clTable', function() {
+  return {
+    templateUrl: 'clTable.html',
+    // templateUrl: 'clTable.html',
+    restrict: 'E',
+    scope: {
+      options: '=options'
+    },
+    link: function(scope, element, attrs) {
+      scope.isObject = function (input) {
+        return angular.isObject(input);
+      };
+    }
+  };
+});
+
+}());
