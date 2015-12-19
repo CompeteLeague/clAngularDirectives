@@ -3,7 +3,7 @@ var clCreation = angular.module('cl.creation', []);
 clCreation.directive('clCreation', function() {
   return {
     // templateUrl: 'clCreation.html',
-    templateUrl: 'bower_components/cl-angular-directives/clCreation/dist/clCreation.html',
+    templateUrl: 'clCreation.html',
     restrict: 'E',
     scope: {
       options: '=options'
