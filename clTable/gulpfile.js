@@ -102,7 +102,7 @@ gulp.task('scripts', ['clean'], function() {
         quotes: true
       }))
       .pipe(templateCache({
-        module: 'ui.select'
+        module: 'cl.table'
       }));
   };
 
