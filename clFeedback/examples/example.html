@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="example">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS cl-feedback</title>
+
+  <!--
+    IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
+    For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+  -->
+  <!--[if lt IE 9]>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+    <script>
+      document.createElement('cl-feedback');
+      document.createElement('cl-feedback-match');
+      document.createElement('cl-feedback-choices');
+    </script>
+  <![endif]-->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- cl-feedback files -->
+  <script src="clFeedback.js"></script>
+  <link rel="stylesheet" href="clFeedback.css">
+
+  <style>
+    body {
+      padding: 15px;
+    }
+
+    .btn-cl,
+    .btn-cl a,
+    .label-cl {
+      color: snow;
+      background-color: #3e3e3e;
+      background: #515151;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #515151), color-stop(50%, #191919), color-stop(100%, #515151));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, #515151 0%, #191919 50%, #515151 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #515151 0%, #191919 50%, #515151 100%);
+      /* W3C */
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#515151', GradientType=1);
+      /* IE6-9 */
+    }
+
+    .btn-cl:hover,
+    .btn-cl:hover a {
+      color: snow;
+      background-color: #6b6b6b;
+      background: #515151;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #515151 0%, #6b6b6b 50%, #515151 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%, #515151), color-stop(50%, #6b6b6b), color-stop(100%, #515151));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, #515151 0%, #6b6b6b 50%, #515151 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, #515151 0%, #6b6b6b 50%, #515151 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, #515151 0%, #6b6b6b 50%, #515151 100%);
+      /* IE10+ */
+      background: linear-gradient(to right, #515151 0%, #6b6b6b 50%, #515151 100%);
+      /* W3C */
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#515151', endColorstr='#515151', GradientType=1);
+      /* IE6-9 */
+    }
+  </style>
+</head>
+
+<body ng-controller="ExampleCtrl">
+  <script src="example.js"></script>
+  <cl-feedback options="youchraFeedback"></cl-feedback>
+  <h2>Test Feedback</h2>
+
+  <p>
+    Lorem ipsum dolor sit amet, quod stet quaeque qui id, munere pericula nec ut, his veniam ignota conclusionemque te. Vim at lorem assueverit. Inani adipisci neglegentur nec at, mei ad tollit ubique regione, ei rebum mazim scaevola pro. Ei has verear equidem
+    appetere, posse liber has ad. Per error oporteat an, ei omnesque sadipscing eum. Ne legimus conceptam pro, sea eu etiam integre veritus, et noluisse delicata eos. Suas oblique qui ea, vix novum possit convenire et. Eum utamur mentitum dignissim ea,
+    utroque petentium scriptorem eu eam. Et vel homero euismod. Usu consul fastidii scribentur an. Cu pro facilis accusamus dissentiunt. No possit mandamus pertinacia has. Apeirian platonem quaerendum ad eam, inani partem verterem eu sit, sit ea noster
+    admodum blandit. Eu sea etiam dignissim, qui ex tation eirmod rationibus. Enim salutatus ut pro, qui in stet habeo facilisis. Eam an hinc vituperata, vix feugiat facilis mentitum ad. Et sea sumo erroribus inciderint, no vix ludus similique, amet consulatu
+    quo at. Quot meis dicta ius et. Et minim deseruisse disputando mel, ei quando discere rationibus mei, ne vel iudico graece definitiones. Insolens dissentias te eos, at vix mucius assentior consectetuer, nostrum omnesque nominavi in ius. Eros duis
+    partiendo cum at, sea postulant definitionem an. Ea usu habeo utinam voluptua, habeo falli molestiae in cum. Aeque consequat eu mei, at mei facete diceret percipit. An vim autem nostrum verterem.
+  </p>
+
+  <button class="btn btn-primary" ng-click="addNegative()">Negative</button>
+  <br>
+  <button class="btn btn-primary" ng-click="addPositive()">Positive</button>
+  <br>
+
+</body>
+
+</html>

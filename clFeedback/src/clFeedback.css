@@ -1,0 +1,69 @@
+.cl-feedback {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  margin-left: -250px;
+  z-index: 99997;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.cl-feedback-list {
+  position: fixed;
+  z-index: 99999;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  padding: 50px;
+  background-color: #f0eded;
+  border-radius: 5px;
+}
+
+.cl-feedback-scroll {
+  height: 400px;
+  overflow: auto;
+  margin-top: 20px;
+}
+.cl-feedback-scroll::-webkit-scrollbar {
+  width: 1em;
+}
+.cl-feedback-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.0);
+}
+.cl-feedback-scroll::-webkit-scrollbar-thumb {
+  background-color: #3e3e3e;
+  border-radius: 15px;
+  outline: 0px solid slategrey;
+}
+
+.cl-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+}
+
+.cl-feedback-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  z-index: 99995;
+  border-radius: 50px;
+}
+
+.cl-feedback-btn-default {
+  background-color: blue;
+}
+
+.cl-popup {
+  -webkit-box-shadow: 8px 6px 18px 2px rgba(168, 2, 0, 0.60), -8px -6px 18px 2px rgba(168, 2, 0, 0.75);
+  -moz-box-shadow: 8px 6px 18px 2px rgba(168, 2, 0, 0.60), -6px -8px 18px 2px rgba(71, 126, 188, 0.75);
+  box-shadow: 8px 6px 18px 2px rgba(168, 2, 0, 0.60), -6px -8px 18px 2px rgba(71, 126, 188, 0.75);
+  width: 600px;
+}

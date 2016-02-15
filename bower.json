@@ -27,6 +27,8 @@
     "clCreation/dist/clcreation.min.js",
     "clStaffSchedule/dist/clstaffschedule.min.js",
     "clTable/dist/cltable.min.js",
+    "clFeedback/dist/clFeedback.min.js",
+    "clFeedback/dist/clFeedback.css",
     "clThumbnail/dist/clthumbnail.min.js"
   ],
   "ignore": [
