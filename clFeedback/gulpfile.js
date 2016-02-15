@@ -102,7 +102,7 @@ gulp.task('scripts', ['clean'], function() {
         quotes: true
       }))
       .pipe(templateCache({
-        module: 'cl.thumbnail'
+        module: 'cl.feedback'
       }));
   };
 
@@ -123,7 +123,7 @@ gulp.task('scripts', ['clean'], function() {
     .pipe(plumber({
       errorHandler: handleError
     }))
-    .pipe(concat('clthumbnail.js'))
+    .pipe(concat('clfeedback.js'))
     .pipe(header(config.banner, {
       timestamp: (new Date()).toISOString(),
       pkg: config.pkg
@@ -141,12 +141,12 @@ gulp.task('scripts', ['clean'], function() {
 
 gulp.task('styles', ['clean'], function() {
 
-  return gulp.src('src/clthumbnail.css')
+  return gulp.src('src/clfeedback.css')
     .pipe(header(config.banner, {
       timestamp: (new Date()).toISOString(),
       pkg: config.pkg
     }))
-    .pipe(rename('clthumbnail.css'))
+    .pipe(rename('clfeedback.css'))
     .pipe(gulp.dest('dist'))
     .pipe(minifyCSS())
     .pipe(rename({
