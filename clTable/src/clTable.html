@@ -1,8 +1,14 @@
+<div ng-if="options.searchable">
+  <div class="form-group">
+      <label>Search</label>
+      <input type="text" class="form-control" ng-model="search" />
+    </div>
+</div>
 <table class="table">
   <tr>
     <th ng-repeat="headline in options.heading">{{headline}}</th>
   </tr>
-  <tr ng-repeat="item in options.content">
+  <tr ng-repeat="item in options.content | filter: search">
     <td ng-repeat="attribute in options.contentAttributes">
       <span ng-if="!isObject(item[attribute])">{{item[attribute]}}</span>
       <button ng-if="isObject(item[attribute])" ng-click="item[attribute].fn(item)" class="btn btn-sm btn-primary">{{item[attribute].display}}</button>

@@ -63,7 +63,8 @@ And in your Controller define the options object as this:
         }
       }],
       heading: ['Name', 'Region', 'Type', 'Date', 'Action'],
-      contentAttributes: ['name', 'region', 'tournamenttype', 'date', 'action']
+      contentAttributes: ['name', 'region', 'tournamenttype', 'date', 'action'],
+      searchable: true
     };
 
 
