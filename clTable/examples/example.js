@@ -37,6 +37,7 @@ module.controller('ExampleCtrl', ['$scope', function($scope) {
       }
     }],
     heading: ['Name', 'Region', 'Type', 'Date', 'Action'],
-    contentAttributes: ['name', 'region', 'tournamenttype', 'date', 'action']
+    contentAttributes: ['name', 'region', 'tournamenttype', 'date', 'action'],
+    searchable: true
   };
 }]);

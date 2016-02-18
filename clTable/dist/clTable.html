@@ -4,6 +4,7 @@
       <input type="text" class="form-control" ng-model="searchItem[item]" />
   </div>
 </div>
+{{searchItem}}
 <table class="table">
   <tr>
     <th ng-repeat="headline in options.heading" ng-click="sort($index)">{{headline}}</th>
