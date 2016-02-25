@@ -37,7 +37,8 @@ And in your Controller define the options object as this:
           display: 'Print It',
           fn: function () {
             console.log('Hello world!');
-          }
+          },
+          class: 'btn-primary'
         }
       }, {
         name: 'Gold/Platinum Season 1',
@@ -48,7 +49,8 @@ And in your Controller define the options object as this:
           display: 'Print It',
           fn: function () {
             console.log('Hello world!');
-          }
+          },
+          class: 'btn-danger'
         }
       }, {
         name: 'Diamon/Above Season 1',
@@ -59,7 +61,8 @@ And in your Controller define the options object as this:
           display: 'Print It',
           fn: function () {
             console.log('Hello world!');
-          }
+          },
+          class: 'btn-warning'
         }
       }],
       heading: ['Name', 'Region', 'Type', 'Date', 'Action'],

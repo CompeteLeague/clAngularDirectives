@@ -11,7 +11,8 @@ module.controller('ExampleCtrl', ['$scope', function($scope) {
         display: 'Print It',
         fn: function () {
           console.log('Hello world!');
-        }
+        },
+        class: 'btn-primary'
       }
     }, {
       name: 'Gold/Platinum Season 1',
@@ -22,7 +23,8 @@ module.controller('ExampleCtrl', ['$scope', function($scope) {
         display: 'Print It',
         fn: function () {
           console.log('Hello world!');
-        }
+        },
+        class: 'btn-danger'
       }
     }, {
       name: 'Diamon/Above Season 1',
@@ -33,7 +35,8 @@ module.controller('ExampleCtrl', ['$scope', function($scope) {
         display: 'Print It',
         fn: function () {
           console.log('Hello world!');
-        }
+        },
+        class: 'btn-warning'
       }
     }],
     heading: ['Name', 'Region', 'Type', 'Date', 'Action'],
